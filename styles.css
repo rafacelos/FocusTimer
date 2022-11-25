@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #7B68EE;
+  --bg-forest: #36CD6A;
+  --bg-rain: #02799D;
+  --bg-coffee: #FC8E6C;
+  --bg-fire: #EC5800;
+
+  --text-color: #323238;
+
+  font-size: 62.5%;
+}
+
+body, input, button {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-primary)
+}
+
+body {
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 2.5rem;
+  display: grid;
+}
+
+.ballsTop {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.ballsBottom {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  height: 3.8rem;
+}
+
+h1 {
+  margin-left: 1.2rem;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+}
+
+span {
+  font-weight: 500;
+  font-size: 126.166px;
+  line-height: 148px;
+}
+
+#controls {
+  margin-top: 3.2rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+}
+
+.themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.themes button {
+  width: 13.8rem;
+  height: 15.2rem;
+  background: #FFFFFF;
+  border-radius: 2.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themes button:hover {
+  outline: 5px solid #FFFFFF;
+}
+
+.forest:hover {
+  background: var(--bg-forest)
+}
+
+.rain:hover {
+  background: var(--bg-rain)
+}
+
+.coffee:hover {
+  background: var(--bg-coffee)
+}
+
+.fire:hover {
+  background: var(--bg-fire)
+}
+
+footer {
+  align-self: end;
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 24px;
+  width: 38rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+a svg {
+  margin: 4px 0 0 4px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+@media (max-width: 1095px) {
+  .ballsTop, .ballsBottom {
+    display: none;
+  }
+
+  header, footer {
+    justify-self: center;
+  }
+}
